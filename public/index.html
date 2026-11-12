@@ -42,14 +42,29 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 .mock-row{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13px;color:var(--muted)}
 .mock-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px}.mock-table th{text-align:left;color:var(--muted);font-weight:600;padding:6px 4px;border-bottom:1px solid var(--line)}.mock-table td{padding:8px 4px;border-bottom:1px solid #1b2740}
 .dlg{background:#101a2c;color:var(--text);border:1px solid var(--line);border-radius:14px;max-width:440px;padding:24px}.dlg::backdrop{background:rgba(5,9,16,.7)}.dlg h3{margin-top:0}.dlg p{color:var(--muted);font-size:14px}
+
+.appbar{position:sticky;top:0;z-index:20;background:#0e1626;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:12px 20px}
+.appbar .who{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}
+.appbar .badge{font:600 9px/1 ui-monospace,monospace;letter-spacing:.12em;border:1px solid #4a3c1e;background:#1d1810;color:var(--gold);border-radius:999px;padding:6px 8px}
+.shell{display:grid;grid-template-columns:230px 1fr;min-height:calc(100vh - 116px)}
+.side{border-right:1px solid var(--line);background:#0c1524;padding:18px 12px}
+.side h4{font:600 10px/1 ui-monospace,monospace;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin:6px 10px 10px}
+.side button{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:none;border:0;color:var(--muted);font:inherit;font-size:13.5px;padding:10px;border-radius:9px;cursor:pointer}
+.side button:hover{background:#13203a;color:var(--text)}.side button.on{background:#16253f;color:var(--text);border:1px solid #2b3f5f}
+.side .lock{margin-left:auto;font-size:10px;color:var(--gold)}
+.content{padding:26px 28px;max-width:1000px}
+.view{display:none}.view.on{display:block}
+.gate{display:flex;gap:10px;align-items:center;border:1px solid #4a3c1e;background:#1b160c;color:#f0dcae;border-radius:10px;padding:10px 13px;font-size:12.5px;margin:16px 0 0}
+.gate a{font-weight:700}
+@media(max-width:860px){.shell{grid-template-columns:1fr}.side{display:flex;gap:8px;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.side h4{display:none}.side button{white-space:nowrap}.content{padding:18px}}
 </style>
 </head>
 <body>
 <div class="demo-banner">Product demo · sample data only · no sign-in · not connected to a live platform or backend</div>
-<header><div class="wrap" style="display:flex;align-items:center"><div class="brand"><div class="mark">GW</div>GWG · Workforce Development</div><nav><a href="#guest">Guest</a><a href="#learner">Learner</a><a href="#audit">Evidence</a><a href="#how">How it works</a></nav></div></header>
+<div class="appbar"><div class="brand"><div class="mark">GW</div>GWG · Guest workspace</div><div class="who"><span class="badge">LIMITED ACCESS</span><span>Guest · view only</span><span class="avatar" style="width:26px;height:26px">G</span></div></div>
 
-<main class="wrap">
-<section class="hero" style="border-top:0">
+<div class="shell"><aside class="side"><h4>Walkthrough</h4><button class="on" data-v="v0">Overview</button><button data-v="v1">Virtual classroom <span class="lock">🔒</span></button><button data-v="v2">Learner workspace <span class="lock">🔒</span></button><button data-v="v3">Auditor evidence <span class="lock">🔒</span></button><button data-v="v4">How it works</button></aside><main class="content">
+<section class="view on" id="v0" style="border-top:0;padding-top:0">
 <p class="kicker">Workforce development infrastructure</p>
 <h1>Train for the work.<br><span>Prove the capability.</span></h1>
 <p class="lede">GWG connects structured programs, guided practice and review to a durable evidence trail — so organisations can see demonstrated capability, not attendance.</p>
@@ -60,7 +75,7 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 </div>
 </section>
 
-<section id="guest">
+<section class="view" id="v1">
 <span class="tag">01 · Guest classroom</span>
 <h2>Join a session before you create an account</h2>
 <p class="sub">The guest surface lets a visitor choose a guided, view-only walkthrough of the priority tools. Every name and number is fictional; nothing opens the real application and no customer information is present.</p>
@@ -75,7 +90,7 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 </div>
 </section>
 
-<section id="learner">
+<section class="view" id="v2">
 <span class="tag">02 · Learner experience</span>
 <h2>A learning path that reacts to evidence</h2>
 <p class="sub">Once signed in, a learner sees programs, competencies, due reviews and reflection prompts. Review scheduling is deadline-aware; mastery is estimated from attempts, not assumed from completion.</p>
@@ -96,7 +111,7 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 </div>
 </section>
 
-<section id="audit">
+<section class="view" id="v3">
 <span class="tag">03 · Organisational evidence</span>
 <h2>Review outcomes without touching the data</h2>
 <p class="sub">Auditors and programme owners get an organisation-scoped, read-only view: sealed scorecards, evidence digests and an activity trail. No mutations, no cross-tenant visibility.</p>
@@ -117,7 +132,7 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 </div>
 </section>
 
-<section id="how">
+<section class="view" id="v4">
 <span class="tag">04 · How it works</span>
 <h2>From programme design to defensible proof</h2>
 <div class="steps">
@@ -130,9 +145,13 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 <section>
 <div class="cta"><div><h2 style="font-size:24px">See the full platform</h2><p>This demo is a guided sample. A live walkthrough covers programme setup, the learner loop and your organisation's evidence model.</p></div><button class="btn" onclick="document.getElementById('contact').showModal()">Request a walkthrough</button></div>
 </section>
-</main>
-<footer><div class="wrap">GWG Workforce Development Platform · product demo. All screenshots and data are illustrative. © 2026 GWG. All rights reserved. No part of this demo may be copied or reused without permission.</div></footer>
+</main></div><footer><div class="wrap">GWG Workforce Development Platform · product demo. All screenshots and data are illustrative. © 2026 GWG. All rights reserved. No part of this demo may be copied or reused without permission.</div></footer>
 <dialog id="contact" class="dlg"><h3>Request a walkthrough</h3><p>This is a sample demo. A live walkthrough covers programme setup, the learner loop and your organisation's evidence model.</p><p class="muted">Contact details will be added here before this link is shared.</p><button class="btn" onclick="this.closest('dialog').close()">Close</button></dialog>
 <script>for(const a of document.querySelectorAll('nav a'))a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'})})</script>
-</body>
+<script>
+const tabs=[...document.querySelectorAll('.side button')];const views=[...document.querySelectorAll('.view')];
+for(const t of tabs)t.onclick=()=>{tabs.forEach(x=>x.classList.toggle('on',x===t));views.forEach(v=>v.classList.toggle('on',v.id===t.dataset.v));scrollTo({top:0,behavior:'smooth'})};
+const gate=document.createElement('div');gate.className='gate';gate.innerHTML='🔒 You are viewing a limited sample. <a href="#" onclick="document.getElementById(\'contact\').showModal();return false">Request full access</a> to open the live workspace.';
+document.querySelectorAll('.view:not(#v0)').forEach(v=>v.appendChild(gate.cloneNode(true)));
+</script></body>
 </html>
