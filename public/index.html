@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GWG Workforce Development Platform — Product Demo</title>
+<meta name="description" content="A guided, sample-data walkthrough of the GWG workforce development platform: guest classroom, learner evidence and read-only audit.">
+<style>
+:root{--ink:#0b1220;--panel:#111b2e;--line:#243149;--text:#e8eef8;--muted:#93a4bd;--gold:#d8b46a;--teal:#5cc8b4}
+*{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--text);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--gold)}.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.demo-banner{background:#3a2c10;color:#f4dfae;text-align:center;font-size:13px;padding:9px 16px;border-bottom:1px solid #5b4519}
+header{padding:20px 0;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center;font-weight:700;letter-spacing:.02em}
+.mark{width:30px;height:30px;border:1px solid var(--gold);border-radius:8px;display:grid;place-items:center;color:var(--gold);font-family:ui-monospace,monospace;font-size:13px}
+nav{margin-left:auto;display:flex;gap:18px;font-size:14px}nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--text)}
+.hero{padding:72px 0 40px}.kicker{font:600 11px/1 ui-monospace,monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+h1{font-size:clamp(34px,5vw,56px);line-height:1.05;margin:16px 0 18px;letter-spacing:-.03em}h1 span{color:var(--gold)}
+.lede{max-width:660px;color:var(--muted);font-size:18px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px}.stat b{display:block;font-size:24px;color:var(--text)}.stat span{font-size:12px;color:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}h2{font-size:30px;letter-spacing:-.02em;margin:0 0 8px}h3{margin:0 0 6px;font-size:18px}
+.sub{color:var(--muted);max-width:720px;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:1.35fr 1fr;gap:32px;align-items:start}
+.shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+.shot img{display:block;width:100%;height:auto}.shot figcaption{font-size:12px;color:var(--muted);padding:10px 14px;border-top:1px solid var(--line)}
+ul.checks{list-style:none;padding:0;margin:0}ul.checks li{padding:10px 0 10px 26px;position:relative;border-bottom:1px solid var(--line);font-size:14.5px}
+ul.checks li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700}
+.tag{display:inline-block;font:600 10px/1 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid #4a3c1e;background:#1d1810;border-radius:999px;padding:6px 10px;margin-bottom:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.step small{color:var(--gold);font-family:ui-monospace,monospace}.step p{color:var(--muted);font-size:14px;margin:8px 0 0}
+.cta{background:linear-gradient(135deg,#152136,#0e1626);border:1px solid var(--line);border-radius:16px;padding:34px;display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.cta p{color:var(--muted);margin:6px 0 0;max-width:560px}.btn{display:inline-block;background:var(--gold);color:#221a08;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:10px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line)}
+@media(max-width:860px){.grid,.steps{grid-template-columns:1fr}nav{display:none}.hero{padding-top:48px}}
+</style>
+</head>
+<body>
+<div class="demo-banner">Product demo · sample data only · no sign-in · not connected to a live platform or backend</div>
+<header><div class="wrap" style="display:flex;align-items:center"><div class="brand"><div class="mark">GW</div>GWG · Workforce Development</div><nav><a href="#guest">Guest</a><a href="#learner">Learner</a><a href="#audit">Evidence</a><a href="#how">How it works</a></nav></div></header>
+
+<main class="wrap">
+<section class="hero" style="border-top:0">
+<p class="kicker">Workforce development infrastructure</p>
+<h1>Train for the work.<br><span>Prove the capability.</span></h1>
+<p class="lede">GWG connects structured programs, guided practice and review to a durable evidence trail — so organisations can see demonstrated capability, not attendance.</p>
+<div class="stats">
+<div class="stat"><b>Program → practice → proof</b><span>One continuous loop</span></div>
+<div class="stat"><b>Mastery, not completion</b><span>Evidence-linked scorecards</span></div>
+<div class="stat"><b>Read-only audit</b><span>Scoped, role-gated review</span></div>
+</div>
+</section>
+
+<section id="guest">
+<span class="tag">01 · Guest classroom</span>
+<h2>Join a session before you create an account</h2>
+<p class="sub">The guest surface shows how a facilitated classroom feels: a slide deck with presenter narration, a participant roster and a comprehension check — with the answer key deliberately withheld.</p>
+<div class="grid">
+<figure class="shot"><img src="assets/preview-guest.png" alt="GWG guest classroom showing a sample slide deck and session controls"><figcaption>Guest classroom · sample deck and roster, no answer key exposed</figcaption></figure>
+<ul class="checks">
+<li>Slide-by-slide walkthrough with narration text</li>
+<li>Sample roster showing participant context</li>
+<li>End-of-session check as a guest sees it</li>
+<li>No account, no learner record, no writable actions</li>
+</ul>
+</div>
+</section>
+
+<section id="learner">
+<span class="tag">02 · Learner experience</span>
+<h2>A learning path that reacts to evidence</h2>
+<p class="sub">Once signed in, a learner sees programs, competencies, due reviews and reflection prompts. Review scheduling is deadline-aware; mastery is estimated from attempts, not assumed from completion.</p>
+<div class="grid">
+<figure class="shot"><img src="assets/preview-dashboard.png" alt="GWG learner dashboard showing programs, review prompts and mastery evidence"><figcaption>Learner dashboard · sample learner, illustrative data</figcaption></figure>
+<ul class="checks">
+<li>Programs mapped to competencies and practice</li>
+<li>Due reviews with snooze and deadline awareness</li>
+<li>Reflection summaries and working notes per skill</li>
+<li>Mastery probability surfaced alongside progress</li>
+</ul>
+</div>
+</section>
+
+<section id="audit">
+<span class="tag">03 · Organisational evidence</span>
+<h2>Review outcomes without touching the data</h2>
+<p class="sub">Auditors and programme owners get an organisation-scoped, read-only view: sealed scorecards, evidence digests and an activity trail. No mutations, no cross-tenant visibility.</p>
+<div class="grid">
+<figure class="shot"><img src="assets/preview-auditor.png" alt="GWG auditor console showing a sealed scorecard and activity trail"><figcaption>Auditor evidence view · read-only, sealed scorecard</figcaption></figure>
+<ul class="checks">
+<li>Sealed scorecards with evidence digests</li>
+<li>Activity trail for review and verification</li>
+<li>Role-gated access with tenant scoping</li>
+<li>Read-only by construction</li>
+</ul>
+</div>
+</section>
+
+<section id="how">
+<span class="tag">04 · How it works</span>
+<h2>From programme design to defensible proof</h2>
+<div class="steps">
+<div class="step"><small>STEP 01</small><h3>Design the programme</h3><p>Define competencies, practice items and the evidence each scorecard must carry.</p></div>
+<div class="step"><small>STEP 02</small><h3>Run the learning loop</h3><p>Learners practise, reflect and return on a spaced schedule; attempts update mastery estimates.</p></div>
+<div class="step"><small>STEP 03</small><h3>Prove the outcome</h3><p>Sealed scorecards and audit trails show what was demonstrated — reviewable, scoped and read-only.</p></div>
+</div>
+</section>
+
+<section>
+<div class="cta"><div><h2 style="font-size:24px">See the full platform</h2><p>This demo is a guided sample. A live walkthrough covers programme setup, the learner loop and your organisation's evidence model.</p></div><a class="btn" href="#top">Request a walkthrough</a></div>
+</section>
+</main>
+<footer><div class="wrap">GWG Workforce Development Platform · product demo. All screenshots and data are illustrative. © 2026 GWG. All rights reserved. No part of this demo may be copied or reused without permission.</div></footer>
+</body>
+</html>
