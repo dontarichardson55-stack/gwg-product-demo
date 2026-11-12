@@ -31,6 +31,17 @@ ul.checks li::before{content:"✓";position:absolute;left:0;color:var(--teal);fo
 .cta p{color:var(--muted);margin:6px 0 0;max-width:560px}.btn{display:inline-block;background:var(--gold);color:#221a08;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:10px}
 footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line)}
 @media(max-width:860px){.grid,.steps{grid-template-columns:1fr}nav{display:none}.hero{padding-top:48px}}
+
+.mock{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.mock-top{display:flex;align-items:center;gap:10px;margin-bottom:14px}.mock-top .avatar{margin-left:auto;width:30px;height:30px;border-radius:50%;background:#1f3550;display:grid;place-items:center;font-size:11px;color:#cfe1f7}
+.pill{font:600 10px/1 ui-monospace,monospace;letter-spacing:.14em;border:1px solid #4a3c1e;background:#1d1810;color:var(--gold);border-radius:999px;padding:6px 9px}
+.mono{font-family:ui-monospace,monospace;font-size:11px;color:var(--muted)}.teal{color:var(--teal)}
+.mock-h{font-size:26px;margin:6px 0 8px;letter-spacing:-.02em}.mock-sub{color:var(--muted);font-size:14px;margin:0 0 16px}
+.mock-card{background:#0d1728;border:1px solid var(--line);border-radius:12px;padding:16px;font-size:14px}
+.mock-actions{display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap}.chip{border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12px}.muted{color:var(--muted)}
+.mock-row{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13px;color:var(--muted)}
+.mock-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px}.mock-table th{text-align:left;color:var(--muted);font-weight:600;padding:6px 4px;border-bottom:1px solid var(--line)}.mock-table td{padding:8px 4px;border-bottom:1px solid #1b2740}
+.dlg{background:#101a2c;color:var(--text);border:1px solid var(--line);border-radius:14px;max-width:440px;padding:24px}.dlg::backdrop{background:rgba(5,9,16,.7)}.dlg h3{margin-top:0}.dlg p{color:var(--muted);font-size:14px}
 </style>
 </head>
 <body>
@@ -52,13 +63,13 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 <section id="guest">
 <span class="tag">01 · Guest classroom</span>
 <h2>Join a session before you create an account</h2>
-<p class="sub">The guest surface shows how a facilitated classroom feels: a slide deck with presenter narration, a participant roster and a comprehension check — with the answer key deliberately withheld.</p>
+<p class="sub">The guest surface lets a visitor choose a guided, view-only walkthrough of the priority tools. Every name and number is fictional; nothing opens the real application and no customer information is present.</p>
 <div class="grid">
-<figure class="shot"><img src="assets/preview-guest.png" alt="GWG guest classroom showing a sample slide deck and session controls"><figcaption>Guest classroom · sample deck and roster, no answer key exposed</figcaption></figure>
+<figure class="shot"><img src="assets/preview-guest.png" alt="GWG guest portal showing guided walkthrough options with fictional sample data"><figcaption>Guest portal · guided, view-only walkthrough with fictional sample data</figcaption></figure>
 <ul class="checks">
-<li>Slide-by-slide walkthrough with narration text</li>
-<li>Sample roster showing participant context</li>
-<li>End-of-session check as a guest sees it</li>
+<li>Guided walkthrough paths across the priority tools</li>
+<li>Every view marked fictional sample data</li>
+<li>No platform access, no account required</li>
 <li>No account, no learner record, no writable actions</li>
 </ul>
 </div>
@@ -69,7 +80,13 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 <h2>A learning path that reacts to evidence</h2>
 <p class="sub">Once signed in, a learner sees programs, competencies, due reviews and reflection prompts. Review scheduling is deadline-aware; mastery is estimated from attempts, not assumed from completion.</p>
 <div class="grid">
-<figure class="shot"><img src="assets/preview-dashboard.png" alt="GWG learner dashboard showing programs, review prompts and mastery evidence"><figcaption>Learner dashboard · sample learner, illustrative data</figcaption></figure>
+<div class="mock">
+<div class="mock-top"><span class="pill">LEARNING WORKSPACE</span><span class="mono">DEMO-ORG</span><span class="avatar">SL</span></div>
+<h3 class="mock-h">Welcome back, Sample Learner.</h3>
+<p class="mock-sub">Your learning journey, measured over time. See where programs stand and what evidence is taking shape.</p>
+<div class="mock-card"><span class="mono teal">DUE REVIEW · ONE ITEM FROM MEMORY</span><p>A scheduled retrieval is ready. Answer in place; this changes the next interval.</p><div class="mock-actions"><span class="chip">Again</span><span class="chip">Hard</span><span class="chip">Got it</span><span class="muted">Not now</span></div></div>
+<div class="mock-row"><span>Evidence being assembled</span><b>3 programs · 12 competencies</b></div>
+</div>
 <ul class="checks">
 <li>Programs mapped to competencies and practice</li>
 <li>Due reviews with snooze and deadline awareness</li>
@@ -84,7 +101,13 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 <h2>Review outcomes without touching the data</h2>
 <p class="sub">Auditors and programme owners get an organisation-scoped, read-only view: sealed scorecards, evidence digests and an activity trail. No mutations, no cross-tenant visibility.</p>
 <div class="grid">
-<figure class="shot"><img src="assets/preview-auditor.png" alt="GWG auditor console showing a sealed scorecard and activity trail"><figcaption>Auditor evidence view · read-only, sealed scorecard</figcaption></figure>
+<div class="mock">
+<div class="mock-top"><span class="mono">READ-ONLY · ROLE READONLY</span><span class="avatar">AR</span></div>
+<h3 class="mock-h">Auditor view</h3>
+<p class="mock-sub">Dated scorecards and the organisation activity trail, as recorded. Nothing here can be edited: write access is refused by the server, not merely hidden in the UI.</p>
+<div class="mock-card"><strong>Sealed scorecards</strong><p class="muted">1 sealed record.</p>
+<table class="mock-table"><thead><tr><th>Code</th><th>Sealed</th><th>Covered</th><th>Integrity digest</th></tr></thead><tbody><tr><td>DEMO-SC-001</td><td>2026-11-11</td><td>1</td><td class="mono">sha256:demo…</td></tr></tbody></table></div>
+</div>
 <ul class="checks">
 <li>Sealed scorecards with evidence digests</li>
 <li>Activity trail for review and verification</li>
@@ -105,9 +128,11 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;border-top:1px so
 </section>
 
 <section>
-<div class="cta"><div><h2 style="font-size:24px">See the full platform</h2><p>This demo is a guided sample. A live walkthrough covers programme setup, the learner loop and your organisation's evidence model.</p></div><a class="btn" href="#top">Request a walkthrough</a></div>
+<div class="cta"><div><h2 style="font-size:24px">See the full platform</h2><p>This demo is a guided sample. A live walkthrough covers programme setup, the learner loop and your organisation's evidence model.</p></div><button class="btn" onclick="document.getElementById('contact').showModal()">Request a walkthrough</button></div>
 </section>
 </main>
 <footer><div class="wrap">GWG Workforce Development Platform · product demo. All screenshots and data are illustrative. © 2026 GWG. All rights reserved. No part of this demo may be copied or reused without permission.</div></footer>
+<dialog id="contact" class="dlg"><h3>Request a walkthrough</h3><p>This is a sample demo. A live walkthrough covers programme setup, the learner loop and your organisation's evidence model.</p><p class="muted">Contact details will be added here before this link is shared.</p><button class="btn" onclick="this.closest('dialog').close()">Close</button></dialog>
+<script>for(const a of document.querySelectorAll('nav a'))a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'})})</script>
 </body>
 </html>
