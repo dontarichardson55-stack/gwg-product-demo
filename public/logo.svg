@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#12224A"/>
+  <!-- GWG brand mark -->
+  <circle cx="32" cy="32" r="4" fill="#2E9BF0"/>
+  <circle cx="32" cy="32" r="10" stroke="#2E9BF0" stroke-width="2.2"/>
+  <circle cx="32" cy="32" r="15.5" stroke="#5CB6F5" stroke-width="1.8"/>
+  <circle cx="32" cy="32" r="21" stroke="#8CCBF8" stroke-width="1.6"/>
+  <circle cx="32" cy="32" r="26.5" stroke="#BFE0FC" stroke-width="1.4"/>
+  <!-- gold brand accent -->
+  <path d="M 32 5.5 A 26.5 26.5 0 0 1 56.6 19" stroke="#F5C518" stroke-width="3" stroke-linecap="round"/>
+</svg>

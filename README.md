@@ -8,4 +8,4 @@ learner dashboard and auditor evidence view.
 - Not connected to the private platform.
 - Proprietary; see LICENSE.
 
-Static site: `public/index.html` with `public/assets/*.png`. Deployed via Sites.
+Static build: `public/index.html` with the compiled app, styles and logo in `public/assets/`. Deployed via Sites.
