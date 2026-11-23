@@ -1,11 +1,29 @@
 # GWG Product Demo
 
-Public, standalone product demonstration for the GWG workforce development
-platform. Guest classroom walkthrough plus annotated sample screenshots of the
-learner dashboard and auditor evidence view.
+Standalone public demo of the GWG workforce-development platform, framed around
+Fracht Group's air, ocean, road and rail operations. It is built from the
+platform's real landing page and guest walkthrough, with auth and Convex stubbed
+out.
 
-- Sample data only. No backend, no database, no auth, no platform source code.
-- Not connected to the private platform.
-- Proprietary; see LICENSE.
+- Illustrative data only. The Fracht Group company profile is public; every
+  learner, score, date and record is illustrative.
+- No backend, no database, no auth, no private platform source.
+- Not connected to the private platform or to Fracht systems of record.
 
-Static build: `public/index.html` with the compiled app, styles and logo in `public/assets/`. Deployed via Sites.
+## Build
+
+```bash
+npm ci
+npm run build
+```
+
+The static build is written to `dist/`. `deploy.json` serves it through the
+Worker in `worker.js`.
+
+## Source layout
+
+- `src/pages/Landing.tsx` — public landing page.
+- `src/pages/Guest.tsx` — view-only guest walkthrough.
+- `src/data/guestSample.ts` — illustrative Fracht Group program, learner and
+  classroom data.
+- `src/components/guest/` — classroom and learner-path interactions.

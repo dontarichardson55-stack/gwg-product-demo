@@ -1,0 +1,11 @@
+/*
+ * Public demo stylesheet.
+ *
+ * `index.css` is synced verbatim from the platform and must not be edited here.
+ * This wrapper adds one demo-only rule: `.sysroot` holds locally unpacked
+ * browser libraries used for verification and must not feed Tailwind's content
+ * scan, or a word like `container` in that tree could add utilities to the
+ * public bundle and make it differ from what is deployed.
+ */
+@import "./index.css";
+@source not "../.sysroot";

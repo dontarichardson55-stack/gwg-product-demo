@@ -1,0 +1,6 @@
+node_modules/
+dist/
+test-results/
+.sysroot/
+.env
+.env.local
