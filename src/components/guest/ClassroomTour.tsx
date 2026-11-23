@@ -433,12 +433,10 @@ function LaneVisual({ lane }: { lane: ClassroomSession["lane"] }) {
         <g fill="#D4A64A">
           <circle cx="46" cy="76" r="5" />
           <circle cx="274" cy="76" r="5" />
-          <circle cx="160" cy="76" r="4" />
         </g>
         <g fill="rgba(255,255,255,0.55)" fontSize="8.5" fontFamily="ui-monospace, SFMono-Regular, monospace">
           <text x="46" y="106" textAnchor="middle">ORIGIN</text>
           <text x="274" y="106" textAnchor="middle">DESTINATION</text>
-          <text x="160" y="64" textAnchor="middle">MILESTONE</text>
         </g>
       </svg>
       <div className="grid gap-2 border-t border-white/10 px-3 py-2.5 sm:grid-cols-3">
