@@ -74,7 +74,7 @@ const capabilities = [
     icon: ShieldCheck,
     n: "05",
     title: "Managers in the loop",
-    body: "Give line managers and performance staff one view of assignments, progress, and who needs support before the next review.",
+    body: "Give line managers and operations leads one view of assignments, progress, and who needs support before the next review.",
   },
   {
     icon: BadgeCheck,
